@@ -1,0 +1,18 @@
+.alert-error{
+    display: block;
+    padding:1rem;
+    background-color: rgba(244, 24, 24, 0.616);
+    margin:1rem;
+    color:#eee;
+   
+
+}
+.alert-error::after{
+    content: "\D7";
+    font-weight: bolder;
+    font-size: 20px;
+    color:green;
+    position: absolute;
+    right:100;
+
+}

@@ -1,3 +1,8 @@
 {% extends './base.html' %} 
 
 {%block title %}Home{% endblock %}
+{%block content%}
+Hello world from homepage
+
+<a href="{% url 'login' %}">login</a>
+{%endblock %}
