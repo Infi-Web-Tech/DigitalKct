@@ -1,0 +1,26 @@
+{% load static %}
+<head>
+    <link href="{% static 'authentication/base.css' %}" rel="stylesheet">
+</head>
+
+<div>
+    <h2>Login Form</h2>
+    {%if messages%}
+    {%for message in messages%}
+    <div {% if message.tags %} class="alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+    {% endfor %}
+    {%endif%}
+    <form  action="{% url 'doLogin' %}" method="POST">
+        {% csrf_token %}
+        <label for="Username" >
+            Username
+        </label>
+        <input type="text" autocomplete="off" placeholder="Enter your mail" name="username">
+        <label for="Password" >
+            Password
+        </label>
+        <input type="password" placeholder="Enter your Password" name="password">
+        <input type="submit" value="Login">
+
+    </form>
+</div>
